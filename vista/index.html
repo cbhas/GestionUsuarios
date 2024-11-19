@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Usuarios</h1>
+    </header>
+
+    <!-- Formulario para Crear Usuarios -->
+    <form id="crearUsuario">
+        <h3>Crear Nuevo Usuario</h3>
+        <input type="text" name="nombre" placeholder="Nombre" required />
+        <input type="email" name="correo" placeholder="Correo Electrónico" required />
+        <input type="password" name="contrasena" placeholder="Contraseña" required />
+        <select name="rol" required>
+            <option value="" disabled selected>Selecciona un Rol</option>
+            <option value="usuario">Usuario</option>
+            <option value="admin">Administrador</option>
+        </select>
+        <button type="submit">Crear Usuario</button>
+    </form>
+
+    <!-- Campo de búsqueda -->
+    <div id="busqueda">
+        <input type="text" id="buscar" placeholder="Buscar usuario por nombre o correo..." />
+    </div>
+
+    <!-- Tabla para Mostrar Usuarios -->
+    <table id="tablaUsuarios">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo Eléctrónico</th>
+                <th>Rol</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <!-- Formulario para Editar Usuarios -->
+    <form id="editarUsuario" style="display: none; margin-top: 20px;">
+        <h3>Editar Usuario</h3>
+        <input type="text" name="nombre" placeholder="Nombre" required />
+        <input type="email" name="correo" placeholder="Correo Electrónico" required />
+        <select name="rol" required>
+            <option value="usuario">Usuario</option>
+            <option value="admin">Administrador</option>
+        </select>
+        <button type="submit">Actualizar Usuario</button>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
